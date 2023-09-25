@@ -29,7 +29,7 @@ class Slimdown {
 		'/\[([^\[]+)\]\(([^\)]+)\)/' => '<a href=\'\2\'>\1</a>',            // links
 		'/(\*\*|__)(.*?)\1/' => '<strong>\2</strong>',                      // bold
 		'/(\*|_)(.*?)\1/' => '<em>\2</em>',                                 // emphasis
-		'/\~\~(.*?)\~\~/' => '<del>\1</del>',                               // del
+		'/\~\~(.*?)\~\~/' => '<del>\2</del>',                               // del
 		'/\:\"(.*?)\"\:/' => '<q>\1</q>',                                   // quote
 		'/`(.*?)`/' => '<code>\1</code>',                                   // inline code
 		'/\n\*(.*)/' => self::class .'::ul_list',                                    // ul lists
